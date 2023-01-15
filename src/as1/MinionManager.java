@@ -27,10 +27,10 @@ public class MinionManager {
         System.out.println("List of Minions:\n");
         System.out.println("****************\n");
 
-        // Iterate over minion list and print each minion's attributes
         for (int i = 0; i < minionList.size(); i++) {
             // Get current minion
             Minion minion = minionList.get(i);
+            // Print attributes of current minion in the minion list
             System.out.println( (i + 1) + ". " + minion.getMinionName() +
             ", " + minion.getHeight() + "m, " + minion.getNumEvilDeeds() +
             " evil deed(s)\n");
@@ -39,14 +39,13 @@ public class MinionManager {
     };
 
     // Increments the numEvilDeed count in a minion by one
-    private static void addEvilDeed(int index) {
-        // Get the correct minion
-        minionList
-
+    public void addEvilDeed(int index) {
+        Minion minion = minionList.get(index - 1);
+        minion.addEvilDeed();
     }
 
     // Removes a minion from the minion list
-    private static void removeMinion(int index) {
+    public void removeMinion(int index) {
         minionList.remove(index - 1);
     };
 }

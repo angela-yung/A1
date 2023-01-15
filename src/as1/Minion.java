@@ -16,7 +16,7 @@ public class Minion {
         this.height = height;
         numEvilDeeds = 0;
     }
-    private void addEvilDeed() {
+    public void addEvilDeed() {
         numEvilDeeds++;
     }
 
