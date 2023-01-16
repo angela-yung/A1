@@ -34,10 +34,10 @@ public class Minion {
 
     @Override
     public String toString() {
-        return "Minion[" +
-                "Name: " + name +
-                ", Height: " + height +
-                ", EvilDeeds: " + numEvilDeeds +
-                ']';
+        return this.getClass()
+                + "[" + "Name: " + name
+                + ", Height: " + height
+                + ", EvilDeeds: " + numEvilDeeds
+                + ']';
     }
 }
