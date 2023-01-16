@@ -1,6 +1,5 @@
 package as1;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 /**
@@ -15,18 +14,21 @@ public class MinionManager {
         minionList = new ArrayList<Minion>();
     }
 
-    public void listMinions() {
-        System.out.println("List of Minions:\n");
-        System.out.println("****************\n");
+    public void printMinionList() {
+        System.out.println("List of Minions:");
+        System.out.println("****************");
 
-        for (int i = 0; i < minionList.size(); i++) {
-            Minion minion = minionList.get(i);
-            // Prints index (i + 1) because the list starts from 1, not 0
-            System.out.println( (i + 1) + ". " + minion.getMinionName() + ", "
-                    + minion.getHeight() + "m, "
-                    + minion.getNumEvilDeeds() + " evil deed(s)\n");
+        if (minionList.size() == 0) {
+            System.out.println("No minions found.");
+        } else {
+            for (int i = 0; i < minionList.size(); i++) {
+                Minion minion = minionList.get(i);
+                // Prints index (i + 1) because the list starts from 1, not 0
+                System.out.println( (i + 1) + ". " + minion.getMinionName() + ", "
+                        + minion.getHeight() + "m, "
+                        + minion.getNumEvilDeeds() + " evil deed(s)");
+            }
         }
-        System.out.println("\n");
     }
 
     public void addNewMinion(String name, double height) {
@@ -41,13 +43,19 @@ public class MinionManager {
     public void addEvilDeed(int index) {
         Minion minion = minionList.get(index - 1);
         minion.addEvilDeed();
+        System.out.println(minion.getMinionName() + " has now done "
+                + minion.getNumEvilDeeds() + " evil deed(s)!");
     }
 
     public void debug() {
-        System.out.println("All minion objects:\n");
+        System.out.println("All minion objects:");
         for (int i = 0; i < minionList.size(); i++) {
-            System.out.println((i + 1) + ". " + minionList.get(i).toString() +"\n");
+            System.out.println((i + 1) + ". " + minionList.get(i).toString());
         }
+    }
+
+    public int getListSize() {
+        return minionList.size();
     }
 
 }
