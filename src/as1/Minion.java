@@ -6,12 +6,12 @@ package as1;
  * deeds completed.
  */
 public class Minion {
-    private String minionName;
+    private String name;
     private double height;
     private int numEvilDeeds;
 
-    public Minion(String minionName, double height) {
-        this.minionName = minionName;
+    public Minion(String name, double height) {
+        this.name = name;
         this.height = height;
         numEvilDeeds = 0;
     }
@@ -20,8 +20,8 @@ public class Minion {
         numEvilDeeds++;
     }
 
-    public String getMinionName() {
-        return minionName;
+    public String getName() {
+        return name;
     }
 
     public double getHeight() {
@@ -32,4 +32,12 @@ public class Minion {
         return numEvilDeeds;
     }
 
+    @Override
+    public String toString() {
+        return "Minion[" +
+                "Name: " + name +
+                ", Height: " + height +
+                ", EvilDeeds: " + numEvilDeeds +
+                ']';
+    }
 }

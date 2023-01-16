@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="612e2bdd-427d-4f65-a841-185701fd9248" name="Changes" comment="5:14pm 1/14">
+    <list default="true" id="612e2bdd-427d-4f65-a841-185701fd9248" name="Changes" comment="7:15pm 1/15">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/as1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/as1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/as1/Minion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/as1/Minion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/as1/MinionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/as1/MinionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/as1/TextUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/as1/TextUI.java" afterDir="false" />
     </list>
@@ -40,9 +41,30 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "settings.editor.selected.configurable": "preferences.general"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="as1.Main" />
+      <module name="A1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="as1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -80,12 +102,25 @@
       <option name="project" value="LOCAL" />
       <updated>1673812867390</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="7:15pm 1/15">
+      <created>1673838963676</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673838963676</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="5:14pm 1/14" />
-    <option name="LAST_COMMIT_MESSAGE" value="5:14pm 1/14" />
+    <MESSAGE value="7:15pm 1/15" />
+    <option name="LAST_COMMIT_MESSAGE" value="7:15pm 1/15" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/A1$Main.ic" NAME="Main Coverage Results" MODIFIED="1673855303823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>as1.*</FILTER>
+    </SUITE>
   </component>
 </project>

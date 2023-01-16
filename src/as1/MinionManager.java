@@ -15,7 +15,7 @@ public class MinionManager {
     }
 
     public void printMinionList() {
-        System.out.println("List of Minions:");
+        System.out.println("\nList of Minions:");
         System.out.println("****************");
 
         if (minionList.size() == 0) {
@@ -24,7 +24,7 @@ public class MinionManager {
             for (int i = 0; i < minionList.size(); i++) {
                 Minion minion = minionList.get(i);
                 // Prints index (i + 1) because the list starts from 1, not 0
-                System.out.println( (i + 1) + ". " + minion.getMinionName() + ", "
+                System.out.println( (i + 1) + ". " + minion.getName() + ", "
                         + minion.getHeight() + "m, "
                         + minion.getNumEvilDeeds() + " evil deed(s)");
             }
@@ -43,14 +43,14 @@ public class MinionManager {
     public void addEvilDeed(int index) {
         Minion minion = minionList.get(index - 1);
         minion.addEvilDeed();
-        System.out.println(minion.getMinionName() + " has now done "
+        System.out.println(minion.getName() + " has now done "
                 + minion.getNumEvilDeeds() + " evil deed(s)!");
     }
 
     public void debug() {
         System.out.println("All minion objects:");
         for (int i = 0; i < minionList.size(); i++) {
-            System.out.println((i + 1) + ". " + minionList.get(i).toString());
+            System.out.println((i + 1) + ". " + minionList.get(i));     // Prints toString()
         }
     }
 

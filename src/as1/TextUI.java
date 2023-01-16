@@ -15,7 +15,7 @@ public class TextUI {
     }
     public void start() {
         System.out.println("***************************************\n"
-                + "Welcome to the Evil Minion Tracker (tm)\nby Angela.\n +"
+                + "Welcome to the Evil Minion Tracker (tm)\nby Angela.\n"
                 + "***************************************");
 
         menu();
@@ -28,7 +28,8 @@ public class TextUI {
             int menuOption = 0;
             menuOption = getMenuOption();
             Scanner scanner = new Scanner(System.in);
-            boolean continueLooping = true;
+            boolean enteringSelection = true;
+            int minionNumber = 0;       // The number corresponding to the minion on menu
 
             switch (menuOption) {
                 case 1: menuOption = 1;
@@ -42,50 +43,62 @@ public class TextUI {
                 case 3 : menuOption = 3;
                     minionList.printMinionList();
                     System.out.println("(Enter 0 to cancel)");
-                    int minionToDelete = 0;
-
-                    while (continueLooping) {
-                        minionToDelete = scanner.nextInt();
-                        if (minionToDelete < 0 || minionToDelete > minionList.getListSize()) {
-                            System.out.println("Error: Please enter a selection between 1 and "
-                                + minionList.getListSize());
-                        } else {
-                            continueLooping = false;
+                    while (enteringSelection) {
+                        minionNumber = scanner.nextInt();
+                        if (minionNumber > 0 && minionNumber <= minionList.getListSize()) {
+                            minionList.removeMinion(minionNumber);
+                            enteringSelection = false;
+                        } else if (minionNumber == 0) {
+                            enteringSelection = false;
+                        }
+                        else {
+                            int minMenuOption = 1;
+                            int maxMenuOption = minionList.getListSize();
+                            if (maxMenuOption == 0) {    // Menu only has option 0 to cancel
+                                minMenuOption = 0;
+                            }
+                            System.out.println("Error: Please enter a selection between " + minMenuOption
+                                    + " and " + maxMenuOption);
                         }
                     }
-                    minionList.removeMinion(minionToDelete);
                     break;
                 case 4: menuOption = 4;
                     minionList.printMinionList();
                     System.out.println("(Enter 0 to cancel)");
-                    int minionChosenForEvilDeed = 0;
-
-                    while (continueLooping) {
-                        minionChosenForEvilDeed = scanner.nextInt();
-                        if (minionChosenForEvilDeed < 0 || minionChosenForEvilDeed > minionList.getListSize()) {
-                            System.out.println("Error: Please enter a selection between 1 and "
-                                    + minionList.getListSize());
+                    while (enteringSelection) {
+                        minionNumber = scanner.nextInt();
+                        if (minionNumber > 0 && minionNumber <= minionList.getListSize()) {
+                            minionList.addEvilDeed(minionNumber);
+                            enteringSelection = false;
+                        } else if (minionNumber == 0) {
+                            enteringSelection = false;
                         } else {
-                            continueLooping = false;
+                            int minMenuOption = 1;
+                            int maxMenuOption = minionList.getListSize();
+                            if (maxMenuOption == 0) {    // Menu only has option 0 to cancel
+                                minMenuOption = 0;
+                            }
+                            System.out.println("Error: Please enter a selection between " + minMenuOption
+                                    + " and " + maxMenuOption);
                         }
                     }
-                    minionList.addEvilDeed(minionChosenForEvilDeed);
                     break;
                 case 5: menuOption = 5;
                     minionList.debug();
+                    break;
                 case 6: menuOption = 6;
                     openMenu = false;
                     break;
                 default:
-                    System.out.println("Error: Please enter a selection between 1 and 6");
+                    assert false;
 
             }
         }
     }
 
     private void displayMenu() {
-        System.out.println("*************\n" + "* Main Menu *\n"
-                + "*************" + "1. List minions\n" + "2. Add a new minion\n"
+        System.out.println("\n*************\n" + "* Main Menu *\n"
+                + "*************\n" + "1. List minions\n" + "2. Add a new minion\n"
                 + "3. Remove a minion\n" + "4. Attribute evil deed to a minion\n"
                 + "5. DEBUG: Dump objects (toString)\n" + "6. Exit");
     }
@@ -93,25 +106,31 @@ public class TextUI {
     private int getMenuOption() {
         int menuOption = 0;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number between 1 and 6: ");
-        menuOption = scanner.nextInt();
+        boolean enteringOption = true;
+        while (enteringOption) {
+            menuOption = scanner.nextInt();
+            if (menuOption > 0 && menuOption < 7) {
+                enteringOption = false;
+            } else {
+                System.out.println("Error: Please enter a selection between 1 and 6");
+            }
+        }
         return menuOption;
     }
 
     private String getMinionName() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter minion's name:    ");
+        System.out.print("Enter minion's name:    ");
         String minionName;
         minionName = scanner.nextLine();
-        boolean looping = true;
-
-        while (looping) {
+        boolean enteringName = true;
+        while (enteringName) {
             if (minionName.length() < 1) {
                 System.out.println("ERROR: Name must be at least 1 character long.\n");
-                System.out.println("Enter minion's name:    ");
+                System.out.print("Enter minion's name:    ");
                 minionName = scanner.nextLine();
             } else {
-                looping = false;
+                enteringName = false;
             }
         }
         return minionName;
@@ -119,18 +138,16 @@ public class TextUI {
 
     private double getMinionHeight() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter minion's height: ");
+        System.out.print("Enter minion's height:  ");
         double minionHeight = 0;
-        minionHeight = scanner.nextInt();
-        boolean looping = true;
-
-        while (looping) {
+        boolean enteringHeight = true;
+        while (enteringHeight) {
+            minionHeight = scanner.nextDouble();
             if (minionHeight < 0) {
                 System.out.println("ERROR: Height must be >= 0.");
-                System.out.println("Enter minion's height: ");
-                minionHeight = scanner.nextInt();
+                System.out.print("Enter minion's height: ");
             } else {
-                looping = false;
+                enteringHeight = false;
             }
         }
         return minionHeight;
