@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="612e2bdd-427d-4f65-a841-185701fd9248" name="Changes" comment="12:24am 1/16">
-      <change afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+    <list default="true" id="612e2bdd-427d-4f65-a841-185701fd9248" name="Changes" comment="12:24pm 1/16">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/as1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/as1/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/as1/Minion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/as1/Minion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/as1/TextUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/as1/TextUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +42,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/usera/Desktop",
     "settings.editor.selected.configurable": "preferences.general"
   }
 }]]></component>
@@ -115,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673857515846</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="12:24pm 1/16">
+      <created>1673900675008</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673900675008</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -123,7 +132,8 @@
     <MESSAGE value="5:14pm 1/14" />
     <MESSAGE value="7:15pm 1/15" />
     <MESSAGE value="12:24am 1/16" />
-    <option name="LAST_COMMIT_MESSAGE" value="12:24am 1/16" />
+    <MESSAGE value="12:24pm 1/16" />
+    <option name="LAST_COMMIT_MESSAGE" value="12:24pm 1/16" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/A1$Main.ic" NAME="Main Coverage Results" MODIFIED="1673855303823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -34,7 +34,7 @@ public class Minion {
 
     @Override
     public String toString() {
-        return this.getClass()
+        return getClass().getName()
                 + "[" + "Name: " + name
                 + ", Height: " + height
                 + ", EvilDeeds: " + numEvilDeeds
